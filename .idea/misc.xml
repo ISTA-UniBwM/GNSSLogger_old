@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://subversion.unibw.de/myGNSS/Segments/User/ISTALogger/RawData_Process" />
+                  <option value="https://subversion.unibw.de/myGNSS/Segments/User/ISTALogger/RinexData_Process" />
+                  <option value="https://subversion.unibw.de/myGNSS/Segments/User/ISTALogger/SensorData_Process" />
+                  <option value="https://subversion.unibw.de/myGNSS/Segments/User/ISTALogger/Tags" />
+                  <option value="https://subversion.unibw.de/myGNSS/Segments/User/ISTALogger/gps-measurement-tools-2.0.0.1" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://subversion.unibw.de/myGNSS/Segments/User/ISTALogger/Tags/v2.1.0.0/GNSSLogger" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

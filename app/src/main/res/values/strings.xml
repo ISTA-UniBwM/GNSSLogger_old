@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">GNSS/IMU Logger</string>
+    <string name="app_version_raw">v2.0.0.1</string>
+    <string name="app_version">v2.1.0.0</string>
+    <string name="compose_email">Compose Email</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_log">GNSS</string>
+    <string name="title_offset">Position Offset</string>
+    <string name="title_map">Map</string>
+    <string name="title_agnss">AGNSS</string>
+    <string name="title_device">Device</string>
+    <string name="title_wls">WLS</string>
+    <string name="title_plot">CNR</string>
+    <string name="title_sensor">Sensor</string>
+    <string name="title_sensorlist">SensorList</string>
+    <string name="title_cmc">CMC</string>
+    <string name="title_ClockOffset">ClockOffset</string>
+
+
+    <string name="location_label">Location</string>
+    <string name="measurements_label">Measurements</string>
+    <string name="nav_msg_label">Navigation Messages</string>
+    <string name="gnss_status_label">GnssStatus</string>
+    <string name="nmea_label">Nmea</string>
+    <string name="auto_scroll">Auto Scroll</string>
+    <string name="residual_plot">Residual Plot</string>
+
+    <string name="help">User Manual</string>
+    <string name="exit">Exit</string>
+    <string name="clearAgps">Clear AGPS</string>
+    <string name="fetchExtraData">Get Xtra</string>
+    <string name="fetchTimeData">Inject Time</string>
+    <string name="requestSingleNlp">Get Network Loc.</string>
+    <string name="requestSingleGps">Get GPS Loc.</string>
+    <string name="ttff">TTFF</string>
+
+    <string name="timer_service_name">GNSS Logger timer</string>
+    <string name="timer_title">Timer Settings</string>
+    <string name="timer_hours">Hours</string>
+    <string name="timer_minutes">Minutes</string>
+    <string name="timer_seconds">Seconds</string>
+    <string name="timer_set">Set</string>
+    <string name="timer_reset">Reset</string>
+    <string name="timer_cancel">Cancel</string>
+    <string name="timer_display">Time Remaining</string>
+    <string name="timer_elapsed">Time Elapsed</string>
+    <string name="start_message">Starting log...</string>
+    <string name="stop_message">Sending file...</string>
+    <string name="longitude_in_degrees">Longitude in decimal degrees</string>
+    <string name="ground_solution_mode">Ground Truth Mode:</string>
+    <string name="please_select_ground_truth_mode">Please Select Ground Truth Mode</string>
+    <string name="latitude_in_degrees">Latitude in decimal degrees</string>
+    <string name="altitude_in_meters">Altitude in meters</string>
+    <string name="turn_on_location_measurement">
+        No Measurement has been received yet. Please turn on Measurement and Location in Settings.
+    </string>
+    <string name="turn_on_RinexLog">
+        Please turn on the RINEX Logging from GNSS tab to plot CMC.
+    </string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="current_average_hint">Current Average Of Strongest 4 Satellites:
+        <xliff:g id="currentAverage">%s</xliff:g></string>
+    <string name="history_average_hint">History Average of Strongest 4 Satellites:
+        <xliff:g id="historyAverage">%s</xliff:g></string>
+    <string name="satellite_number_sum_hint">Total Number of Visible Satellites:
+        <xliff:g id="totalNumber">%d</xliff:g></string>
+    <string name="satellite_number_sum_slip_hint">Total Satellite | with Cycle Slip:
+        <xliff:g id="totalNumber_slip">%d</xliff:g></string>
+    <string name="satellite_number_sum_noslip_hint">without Cycle Slip:
+        <xliff:g id="totalNumber_slip">%d</xliff:g></string>
+    <string name="gps_satellite_number_sum_slip_hint">GPS Satellite | with Cycle Slip:
+        <xliff:g id="gps_totalNumber_slip">%d</xliff:g></string>
+    <string name="gps_satellite_number_sum_noslip_hint">without Cycle Slip:
+        <xliff:g id="gps_totalNumber_noslip">%d</xliff:g></string>
+    <string name="gal_satellite_number_sum_slip_hint">GALILEO Satellite | with Cycle Slip:
+        <xliff:g id="gal_totalNumber_slip">%d</xliff:g></string>
+    <string name="gal_satellite_number_sum_noslip_hint">without Cycle Slip:
+        <xliff:g id="gal_totalNumber_noslip">%d</xliff:g></string>
+    <string name="beidou_satellite_number_sum_slip_hint">BEIDOU Satellite | with Cycle Slip:
+        <xliff:g id="beidou_totalNumber_slip">%d</xliff:g></string>
+    <string name="beidou_satellite_number_sum_noslip_hint">without Cycle Slip:
+        <xliff:g id="beidou_totalNumber_noslip">%d</xliff:g></string>
+    <string name="sensor_log">Sensors</string>
+    <string-array name="cmc_constellation_arrays">
+        <item>All</item>
+        <item>GPS</item>
+        <item>SBAS</item>
+        <item>GLONASS</item>
+        <item>QZSS</item>
+        <item>BEIDOU</item>
+        <item>GALILEO</item>
+    </string-array>
+    <string-array name="constellation_arrays">
+        <item>All</item>
+        <item>GPS</item>
+        <item>SBAS</item>
+        <item>GLONASS</item>
+        <item>QZSS</item>
+        <item>BEIDOU</item>
+        <item>GALILEO</item>
+    </string-array>
+    <string-array name="cmc_tab_arrays">
+        <item>L1</item>
+    </string-array>
+    <string-array name="tab_arrays">
+        <item>C/N0</item>
+        <item>PR Residual</item>
+    </string-array>
+    <string-array name="residual_options">
+        <item>Manual - Still</item>
+        <item>Manual - Moving</item>
+        <item>Manual - Use LLA input</item>
+        <item>Automatic - AR Based</item>
+    </string-array>
+    <string-array name="plot_titles">
+        <item>CN0(dB.Hz) vs Time(s)</item>
+        <item>Pseudorange residual(m) vs Time(s)</item>
+    </string-array>
+    <string-array name="cmc_plot_titles">
+        <item>Code Minus Carrier(m) vs Time(s)</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="log_uncalibrated_sensor_data">Uncalibrated Sensor Data</string>
+    <string name="log_calibrated_sensor_data">Calibrated Sensor Data</string>
+    <string name="stop_log">Stop Log</string>
+    <string name="log_rinex_and_uncalibrated_sensor_data"> RNX + Uncalibrated Sensor Data</string>
+    <string name="log_rinex_and_calibrated_sensor_data"> RNX + Calibrated Sensor Data</string>
+</resources>

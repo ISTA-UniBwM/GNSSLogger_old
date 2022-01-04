@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/plotAcc"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="3"
+        android:orientation="vertical" />
+
+    <!-- 6 columns row 3 -->
+
+
+    <LinearLayout
+        android:id="@+id/plotGyro"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_weight="3"
+        android:orientation="vertical" />
+
+    <!-- 6 columns row 4 -->
+
+    <!--  <LinearLayout
+          android:id="@+id/plotMag"
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:layout_weight="2"
+          android:orientation="vertical" /> -->
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_weight="0.2"
+          android:layout_height="wrap_content">
+          ​
+  <TableLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <Switch
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:id="@+id/uncalibrsensorLog"
+          android:layout_weight="1"
+          android:singleLine="true"
+          android:layout_marginTop="15dp"
+          android:text="@string/log_uncalibrated_sensor_data" />
+      <Switch
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:id="@+id/calibrsensorLog"
+          android:singleLine="true"
+          android:layout_marginTop="15dp"
+          android:text="@string/log_calibrated_sensor_data" />
+      <Switch
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:id="@+id/uncalibrsensorRnxLog"
+          android:singleLine="true"
+          android:layout_marginTop="15dp"
+          android:text="@string/log_rinex_and_uncalibrated_sensor_data" />
+      <Switch
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:id="@+id/calibrsensorRnxLog"
+          android:singleLine="true"
+          android:layout_marginTop="15dp"
+          android:text="@string/log_rinex_and_calibrated_sensor_data" />
+  </TableLayout>
+      </LinearLayout>
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <TextView
+              android:id="@+id/sensor_timer_display"
+              android:layout_width="155dp"
+              android:layout_weight="1.4"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:background="#C2BBB4"
+              android:textStyle="bold" />
+          <Chronometer
+              android:id="@+id/sensor_chronometer"
+              android:layout_width="155dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.4"
+              android:background="#C2BBB4"
+              android:gravity="center_horizontal"
+              android:textStyle="bold" />​
+      </LinearLayout>
+
+
+
+
+
+
+
+
+
+  </TableLayout>

@@ -1,0 +1,158 @@
+<div align="center"><font color="#0000FF"><h2>USER MANUAL Version v2.0.0.0</h2></font></div>
+Thank you for choosing GNSS/IMU logging Android Application. This document is your step by step guide for logging different data types available. This document also gives a brief introduction to different tool / Receiver Software, used for processing the logged data.
+<br>
+
+<h3>About the App </h3>
+<ul>
+    <li>Supports GNSS data from GPS/GALILEO/ BEIDOU for L1/L5/E1B/E1C/E5A (as supported by the device) </li>
+    <li>Log GNSS measurements in the RINEX 3.03 format (Pseudorange, Carrier-Phase, Doppler and Noise level) </li>
+    <li>Log RAW GNSS Measurements with Navigation Message and/or NMEA Message </li>
+    <li>Logs Accelerometer (m/s2), Gyroscope (rad/s) and Magnetometer (μT) data </li>
+    <li>Real-Time Visualization of Code Minus Carrier (CMC) plot </li>
+
+</ul>
+</a>
+<br>
+
+<h3>Logging the Sensor Data</h3>
+<ul>
+  <li>Go to Settings Tab </li>
+  <li>Turn on the "Screen Always ON" Switch </li>
+  <li>Go to Sensor Tab </li>
+  <li>Turn ON the "Log Sensor Data" Switch </li>
+  <li>Accelerometer, Gyroospcope and Magnetometer measurements will be logged in ASCII format</li>
+  <li>Turn OFF the "Log Sensor Data" Switch to stop logging</li>
+  <li>Go to your device storage root directory </li>
+  <li>Open "GNSS-IMU Logger" folder</li>
+  <li>Open "IMU_Log" folder inside "GNSS-IMU Logger" folder </li>
+  <li>Your log file will be located inside this folder in the format devicename_IMU_YearMonthDayHourMinuteSecond </li>
+  <li>Convert the Sensor out file (ASCII) to .mif format or .imr format to process with MuSNAT or Inertial Explorer respectively using MATLAB Tool </li>
+</ul>
+</a>
+<br>
+
+<h3>Logging the RINEX Data</h3>
+<ul>
+  <li>Go to Settings Tab </li>
+  <li>Turn on the "Location" and "Measurement" Switch </li>
+  <li>Wait for the Display Message "GNSS Measurement are Available" (displayed when more than 4 satellites are available for logging) </li>
+  <li>Go to GNSS Tab and Press "RNX LOG" button to start the logging</li>
+  <li>Stop & Send button: Stops logging and shows dialog to send the file via email or other options</li>
+  <li>Go to your device storage root directory </li>
+  <li>Open "GNSS-IMU Logger" folder</li>
+  <li>Open "Rinex_Log" folder inside "GNSS-IMU Logger" folder</li>
+</ul>
+</a>
+<br>
+
+<h3>Logging the RAW GNSS Measurements</h3>
+<ul>
+  <li>Go to Settings Tab </li>
+  <li>Turn on the "Location" and "Measurement" Switch </li>
+  <li>Wait for the Display Message "GNSS Measurement are Available" (displayed when more than 4 satellites are available for logging) </li>
+  <li>Go to GNSS Tab and press "RAW LOG" button for logging RAW GNSS Measurements</li>
+  <li>Turn ON "Navigation Message" and or "NMEA" Switch to include Navigation message or NMEA message respectively inside the RAW Measurements</li>
+  <li>Stop & Send button: Stops logging and shows dialog to send the file via email or other options</li>
+  <li>Go to your device storage root directory </li>
+  <li>Open "GNSS-IMU Logger" folder</li>
+  <li>Open "Raw_Log" folder or "Rinex_Log" folder inside "GNSS-IMU Logger" folder</li>
+  <li>Your log file will be located inside the "Raw_Log" folder in the format devicename_Raw_YearMonthDayHourMinuteSecond</li>
+</ul>
+</a>
+<br>
+
+<h3>Logging the RINEX + Sensor Data</h3>
+<ul>
+  <li>Go to Settings Tab </li>
+  <li>Turn on the Location and Measurement Switch </li>
+  <li>Turn on the "Screen Always ON" Switch </li>
+  <li>Wait for the Display Message "GNSS Measurement are Available" (displayed when more than 4 satellites are available for logging) </li>
+  <li>Go to Sensor Tab </li>
+  <li>Turn ON the "Log RNX + Sensor Data" Switch </li>
+  <li>Turn OFF the "Log RNX + Sensor Data" Switch to stop logging</li>
+  <li>Go to your device storage root directory </li>
+  <li>Open "GNSS-IMU Logger" folder</li>
+  <li>Open "IMU_Log" folder inside "GNSS-IMU Logger" folder and your IMU log file is located there </li>
+  <li>Open "Rinex_Log" folder inside "GNSS-IMU Logger" folder and your Rinex log file is located there </li>
+  <li>Convert the Sensor output file (ASCII) to .mif format or .imr format using MATLAB Tool to process with MuSNAT or Inertial Explorer respectively</li>
+</ul>
+</a>
+<br>
+<h3>Code Minus Carrier Plot</h3>
+<ul>
+  <li>Go to Settings Tab </li>
+  <li>Turn on the Location and Measurement Switch </li>
+  <li>Turn on the "Screen Always ON" Switch </li>
+  <li>Wait for the Display Message "GNSS Measurement are Available" (displayed when more than 4 satellites are available for logging) </li>
+  <li>Go to GNSS Tab and Press "RNX LOG" button to start the logging</li>
+  <li>Go to the CMC Plot tab for visualization </li>
+  <li>"Code Minus Carrier (m)" plot shows a "line" for each satellite without any cycle slip on the current epoch. If a cycle slip occur, it will be indicated by a "sphere" and will reset. </li>
+  <li>"Code Minus Carrier Normalized (m)" plot shows a "line" for each satellite without any cycle slip on the current epoch. the cycle slip is indicated by a a gap in the line. All the CMC values are normalized with first CMC values (no-cycle slip) for each individual satellite.</li>
+</ul>
+</a>
+<br>
+<div align="left"><font color="#F73030">Note : For continuous logging of GNSS data with the Smartphone, we encourage user to have "Force full GNSS measurements" ON from developer options during logging.</font></div>
+
+<h3>Clock Error Plot </h3>
+<ul>
+  <li>Go to Settings Tab </li>
+  <li>Turn on the Location and Measurement Switch </li>
+  <li>Turn on the "Screen Always ON" Switch </li>
+  <li>Wait for the Display Message "GNSS Measurement are Available" (displayed when more than 4 satellites are available for logging) </li>
+  <li>Turn ON the "Log RNX + Sensor Data" Switch </li>
+  <li>Go to the CLOCKOFFSET Plot tab for visualization </li>
+  <li>"Clock offset" plot shows a an offset between between the GPSTime (from GnssClock Class) used for logging RINEX data and ElapsedRealTime (from SystemClock) used for logging Sensor data. </li>
+  <li> The Moving Average offset indicate the normalized value (with first epoch) using dedicated averaging window.</li>
+</ul>
+</a>
+<br>
+
+<h3>Processing Software</h3>
+The GNSS Measurements and Sensor Measurements were successfully processed with number of Receiver Software available RTKLib(Open-Source), MuSNAT (UniBWM) and Inertial Explorer (Novatel Inc.).
+<ul>
+	<h4>RTKLIb</h4>
+	<ul>
+	<li>Open Source Receiver Software capable of Processing RINEX observation data </li>
+	<li>Logged RINEX file were tested successfully with SPP and RTK Processing (Float Solution) </li>
+	<a href="http://www.rtklib.com/">RTKLib</a>
+	</ul>
+	<h4>MuSNAT</h4>
+    <ul>
+    <li>MuSNAT : Multi-Sensor Navigation Analysis Tool </li>
+    <li>MuNSAT is a Commercially available Receiver Software developed at the UniBW Munich </li>
+    <li>Logged RINEX file were tested with SPP and RTK Processing (Float Solution) </li>
+    <li>GNSS-IMU measurement were processed successfully with Loosely-Coupled Mode </li>
+    <a href="https://www.unibw.de/lrt9/lrt-9.2/software-packages/musnat ">MuSNAT</a>
+    </ul>
+	<h4>Inertial Explorer</h4>
+	<ul>
+	<li>Commercial Receiver Software developed at Novatel Inc.</li>
+	<li>GNSS-IMU measurement were processed successfully with Loosely-Coupled Mode</li>
+	<a href="https://novatel.com/products/waypoint-software/inertial-explorer">Inertial Explorer</a>
+	</ul>
+	<h4>GNSS Analysis Tool</h4>
+	<ul>
+	<li>Open-source, Matlab based tool developed by Google Inc</li>
+	<li>Capable of reading RAW GNSS measurements output file</li>
+	<a href="https://developer.android.com/guide/topics/sensors/gnss">GNSS Analysis Tool</a>
+	</ul>
+</ul>
+</a>
+<br>
+
+<h3>Additional Tools</h3>
+The Sensor file logged with the GNSS/IMU logger is a ASCII format file and can be converted to any required format. Additionally, A Matlab Tool can be downloaded <a href="https://www.unibw.de/lrt9/lrt-9.2/forschung/ista-logger">MATLAB Tool</a> from our website to convert the sensor file to MuSNAT compatible format (.mif) and Inertial Explorer compatible format (.imr).
+<br>
+
+<h3>Disclaimer </h3>
+The GNSS/IMU Logger is intended solely for education and research purposes. It is not, and is not intended, for any commercial use till date. The quality of GNSS or/and IMU data is completely device specific and UniBwM gives no guarantee for ensuring the accuracy of data logged and the processing afterwards. All information provided by the GNSS/IMU Logger is provided in good faith. However , we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information and measurements provided by the GNSS/IMU Logger.
+<br>
+
+<h3>Feedback</h3>
+Any comments, feedback, suggestions on  GNSS/IMU Logger please write to us using the link below.
+<br>
+<a href="mailto:ista-software@unibw.de">Contact support</a>
+</a>
+<br>
+
+
