@@ -2,12 +2,12 @@
 
 This package have been developed completely in java on Android Studio IDE. This section is your step by step guide running the source code on the Android Studio.
  <li>Download and Install the Android Studio </li> 
- <li>download the source code from the repository window </li>
- <li>exract the downloaded repository i.e by default GNSSLogger-Master </li>
+ <li>Download the source code from the repository window </li>
+ <li>Exract the downloaded repository i.e by default GNSSLogger-Master </li>
  <li>Open Android Studio Application </li>
- <li>go to file -> Open -> location of your repository -> click on GNSSLogger-Master Android icon </li>
- <li>wait for the Gradle Sync to finish </li> 
- <li>go to Build tab on the top panel of Android studio and click Rebuild Project </li>
+ <li>Go to file -> Open -> location of your repository -> click on GNSSLogger-Master Android icon </li>
+ <li>Wait for the Gradle Sync to finish </li> 
+ <li>Go to Build tab on the top panel of Android studio and click Rebuild Project </li>
  <li>Connect the desired Smartphone where you want to install the Android Application </li>
  <li>Make sure your Smartphone is displayed in the Available device list in the Android Studio window </li>
  <li>Once the 'successful build message is displayed', Click on Run tab -> Run App </li>
