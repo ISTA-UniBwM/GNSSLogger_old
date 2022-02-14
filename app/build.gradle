@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion '30'
     defaultConfig {
         applicationId "com.ista.android.apps.location.gps.gnsslogger"
         minSdkVersion 24
-        targetSdkVersion 29
-        versionCode 19
-        versionName "v2.1.0.0"
+        targetSdkVersion 31
+        versionCode 24
+        versionName "v2.1.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         resConfigs "en"
