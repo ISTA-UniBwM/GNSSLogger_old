@@ -2,7 +2,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">GNSS/IMU Logger</string>
     <string name="app_version_raw">v2.0.0.1</string>
-    <string name="app_version">v2.1.0.0</string>
+    <string name="app_version">v2.1.0.1</string>
     <string name="compose_email">Compose Email</string>
     <string name="title_settings">Settings</string>
     <string name="title_log">GNSS</string>
