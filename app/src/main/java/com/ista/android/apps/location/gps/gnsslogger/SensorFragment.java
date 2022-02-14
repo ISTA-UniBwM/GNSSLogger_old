@@ -376,15 +376,17 @@ public class SensorFragment extends Fragment implements SensorEventListener {
         /*register the sensor listener to listen to the gyroscope sensor, use the
          * callbacks defined in this class, and gather the sensor information as
          * quick as possible*/
-        if (Uncalibrated_logSensor.isChecked() || logRnx_uncalibrated_Sensor.isChecked()) {
+        //if (Uncalibrated_logSensor.isChecked() || logRnx_uncalibrated_Sensor.isChecked()) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             sManager.registerListener(this, sManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER_UNCALIBRATED), SensorManager.SENSOR_DELAY_FASTEST);
-            sManager.registerListener(this, sManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE_UNCALIBRATED), SensorManager.SENSOR_DELAY_FASTEST);
-            sManager.registerListener(this, sManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD_UNCALIBRATED), SensorManager.SENSOR_DELAY_FASTEST); }
-        else {
+        }
+        sManager.registerListener(this, sManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE_UNCALIBRATED), SensorManager.SENSOR_DELAY_FASTEST);
+            sManager.registerListener(this, sManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD_UNCALIBRATED), SensorManager.SENSOR_DELAY_FASTEST);// }
+       // else {
             sManager.registerListener(this, sManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_FASTEST);
             sManager.registerListener(this, sManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE), SensorManager.SENSOR_DELAY_FASTEST);
-            sManager.registerListener(this, sManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD_UNCALIBRATED), SensorManager.SENSOR_DELAY_FASTEST);
-            }
+            sManager.registerListener(this, sManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD), SensorManager.SENSOR_DELAY_FASTEST);
+        //    }
     }
 
     //When this Activity isn't visible anymore
@@ -617,13 +619,12 @@ public class SensorFragment extends Fragment implements SensorEventListener {
                 }
             }
         }
-        if (sensor.getType() == Sensor.TYPE_ACCELEROMETER_UNCALIBRATED) {
+        else if (sensor.getType() == Sensor.TYPE_ACCELEROMETER_UNCALIBRATED) {
             //TODO: get value
             int sensor_type = 1;
             if(Uncalibrated_logSensor.isChecked()){
                 try {
                     writeSensorLog_uncalibr(eventtimeMillis,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv2);
-                    //writeTolog(sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]), timeInMillis);
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -631,7 +632,6 @@ public class SensorFragment extends Fragment implements SensorEventListener {
             }
             if(logRnx_uncalibrated_Sensor.isChecked()){
                 try {
-                    //writeSensorLog_uncalibr(eventtimeMillis,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv2);
                     writeSensorLog_uncalibr_withrnx(timeInMillis,gpstimemilli,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv2);
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
@@ -664,7 +664,6 @@ public class SensorFragment extends Fragment implements SensorEventListener {
             if(Calibrated_logSensor.isChecked()){
                 try {
                     writeSensorLog_calibr(timeInMillis,gpstimemilli,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv);
-
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -685,7 +684,6 @@ public class SensorFragment extends Fragment implements SensorEventListener {
             if(Uncalibrated_logSensor.isChecked()){
                 try {
                     writeSensorLog_uncalibr(eventtimeMillis,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv2);
-
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -693,9 +691,7 @@ public class SensorFragment extends Fragment implements SensorEventListener {
             }
             if(logRnx_uncalibrated_Sensor.isChecked()){
                 try {
-                    //writeSensorLog_uncalibr(eventtimeMillis,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv2);
                     writeSensorLog_uncalibr_withrnx(timeInMillis,gpstimemilli,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv2);
-
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -723,7 +719,6 @@ public class SensorFragment extends Fragment implements SensorEventListener {
             if(Calibrated_logSensor.isChecked()){
                 try {
                     writeSensorLog_calibr(timeInMillis,gpstimemilli,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv);
-
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -732,7 +727,6 @@ public class SensorFragment extends Fragment implements SensorEventListener {
             if(logRnx_calibrated_Sensor.isChecked()){
                 try {
                     writeSensorLog_calibr(timeInMillis,gpstimemilli,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv);
-
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -746,7 +740,6 @@ public class SensorFragment extends Fragment implements SensorEventListener {
             if(Uncalibrated_logSensor.isChecked()){
                 try {
                     writeSensorLog_uncalibr(eventtimeMillis,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv2);
-
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -754,9 +747,7 @@ public class SensorFragment extends Fragment implements SensorEventListener {
             }
             if(logRnx_uncalibrated_Sensor.isChecked()){
                 try {
-                    //writeSensorLog_uncalibr(eventtimeMillis,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv2);
                     writeSensorLog_uncalibr_withrnx(timeInMillis,gpstimemilli,sensor_type,Float.toString(event.values[0]), Float.toString(event.values[1]), Float.toString(event.values[2]),csv2);
-
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
