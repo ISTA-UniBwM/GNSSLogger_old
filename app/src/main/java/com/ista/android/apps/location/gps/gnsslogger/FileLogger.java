@@ -90,7 +90,7 @@ public class FileLogger implements GnssListener {
       File baseDirectory;
       String state = Environment.getExternalStorageState();
       if (Environment.MEDIA_MOUNTED.equals(state)) {
-        File folder_root = new File(Environment.getExternalStorageDirectory(),rootfolder);
+        File folder_root = new File(mContext.getExternalFilesDir(null),rootfolder);
         folder_root.mkdir();
         baseDirectory = new File(folder_root, "Raw_Log");
         baseDirectory.mkdirs();
