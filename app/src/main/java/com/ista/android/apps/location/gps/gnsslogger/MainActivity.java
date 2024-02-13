@@ -161,11 +161,20 @@ public class MainActivity extends AppCompatActivity
     requestPermissionAndSetupFragments(this);
   }
 
+//  protected PendingIntent createActivityDetectionPendingIntent() {
+//    Intent intent = new Intent(this, DetectedActivitiesIntentReceiver.class);
+//    return PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+//  }
+
   protected PendingIntent createActivityDetectionPendingIntent() {
     Intent intent = new Intent(this, DetectedActivitiesIntentReceiver.class);
-    return PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-  }
 
+    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+      return PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_IMMUTABLE);
+    } else {
+      return PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+  }
 
   private synchronized void buildGoogleApiClient() {
     mGoogleApiClient =
